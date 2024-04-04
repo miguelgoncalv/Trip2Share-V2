@@ -16,6 +16,7 @@ import PrivacyPolicy from './Components/PrivacyPolicy';
 import PlacesRecommended from './Components/PlacesRecommended';
 import ChatRoom from './Components/ChatRoom';
 import ProfileSetup from './Components/ProfileSetup';
+import ChatList from './Components/ChatList';
 
 function App() {
   return (
@@ -40,6 +41,9 @@ function App() {
           <Route path="/placesrecommended" element={<PlacesRecommended />} />
           <Route path="/chatroom/:chatId" element={<ChatRoom />} />
           <Route path="/profilesetup" element={<ProfileSetup />} />
+          <Route path="/chats" element={<ChatList />} />
+          
+
 
 
           {/* Protected routes */}

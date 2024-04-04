@@ -1,0 +1,87 @@
+/* ChatList.css */
+
+:root {
+    --chat-background: #ffffff;
+    --chat-item-hover: #f2f2f2;
+    --chat-text-primary: #333;
+    --chat-text-secondary: #666;
+    --chat-border: #ddd;
+    --chat-avatar-size: 50px;
+    --chat-spacing: 10px;
+    --chat-font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  }
+  
+  .chat-list-container {
+    padding: 20px;
+    background-color: var(--chat-background);
+    font-family: var(--chat-font-family);
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    overflow: hidden;
+    max-height: 600px; /* Optional: if you want to set a max-height for your chat list */
+  }
+  
+  .chat-list-title {
+    margin-bottom: 20px;
+    font-size: 24px; /* Adjust the size as necessary */
+    font-weight: bold;
+    color: var(--chat-text-primary);
+  }
+  
+  .chat-item {
+    display: flex;
+    align-items: center;
+    padding: var(--chat-spacing);
+    border-bottom: 1px solid var(--chat-border);
+    transition: background-color 0.3s;
+    color: var(--chat-text-primary);
+    text-decoration: none;
+  }
+  
+  .chat-item:hover {
+    background-color: var(--chat-item-hover);
+  }
+  
+  .chat-item-avatar {
+    width: var(--chat-avatar-size);
+    height: var(--chat-avatar-size);
+    border-radius: 50%;
+    object-fit: cover; /* This ensures the image covers the area without stretching */
+    margin-right: var(--chat-spacing);
+  }
+  
+  .chat-item-details {
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* This will vertically center the text if the avatar is larger than text */
+  }
+  
+  .chat-item-title {
+    font-size: 1rem;
+    font-weight: bold;
+    color: var(--chat-text-primary);
+    margin-bottom: 5px; /* Spacing between title and last message */
+  }
+  
+  .chat-item-last-message {
+    font-size: 0.875rem;
+    color: var(--chat-text-secondary);
+  }
+  
+  .chat-item-timestamp {
+    font-size: 0.75rem;
+    color: var(--chat-text-secondary);
+    margin-top: 5px; /* Spacing between last message and timestamp */
+  }
+  
+  /* Responsive media query if needed */
+  @media (max-width: 768px) {
+    .chat-list-container {
+      padding: 10px;
+    }
+    
+    .chat-item {
+      padding: var(--chat-spacing);
+    }
+  }
+  
